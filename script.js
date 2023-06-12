@@ -57,3 +57,17 @@ function zoomImg(posicao){
 
     new bootstrap.Modal('#zoomImg').show();
 }
+
+function alterarTemaSite() {
+    let tema = document.querySelector("html").getAttribute("data-bs-theme");
+    if(tema === "dark") {
+        document.querySelector("html").setAttribute("data-bs-theme", "light");
+        document.querySelector("#alterarTemaSite").innerHTML = `<i class="bi bi-moon-fill"></i>`;
+        document.querySelector('body').style.color = '#000000';
+    } else {
+        document.querySelector("html").setAttribute("data-bs-theme", "dark");
+        document.querySelector("#alterarTemaSite").innerHTML = `<i class="bi bi-moon-fill"></i>`;
+        document.querySelector('body').style.color = '#FFFAFA';
+    }
+}
+
